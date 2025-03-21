@@ -66,18 +66,18 @@ void loop() {
     mma.read(); // Read new data from accelerometer
 
     long sampleTime = measureSampleTime(); //Measuring the timing between samples
-    Serial.print("Time between Samples: ");
+    //Serial.print("Time between Samples: ");
     Serial.print(sampleTime);
     Serial.println(" microSeconds");
     
-    
+   /* 
     Serial.print("Raw Data:");
     Serial.print("\t X: ");Serial.print(mma.x);  
     Serial.print("\t\t Y: ");Serial.print(mma.y);
     Serial.print("\t Z: ");Serial.print(mma.z);
     //Serial.println("\n");
     Serial.println(); 
-  
+  */
     Serial.printf("TS: %lu\tX: %.3f\t Y: %.3f\t Z: %.3f M/S^2\n", millis(), GtoMeterSQConversion(mma.x), GtoMeterSQConversion(mma.y), GtoMeterSQConversion(mma.z)); 
     Serial.println(); 
     delay(500);
